@@ -24,7 +24,7 @@ class MyTestCase(unittest.TestCase):
         result = calculator.multiply(2, 3)
         self.assertEqual(6, result)
 
-    def test_calculator_division(self):
+    def test_calculator_divisionByZero(self):
         calculator = Calculator()
         result = calculator.divide(10, 0)
         self.assertEqual("You are funny, no division by 0!", result)
