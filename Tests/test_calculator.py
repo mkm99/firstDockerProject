@@ -81,6 +81,5 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(3, calculator.Result)
 
 
-
 if __name__ == '__main__':
     unittest.main()

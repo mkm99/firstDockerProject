@@ -26,5 +26,11 @@ class MyTestCase(unittest.TestCase):
     def test_MathOperations_Division(self):
         self.assertEqual(5, Division.division(35,7))
 
+    def test_MathOperations_Exponentiation(self):
+        self.assertEqual(27, Exponentiation.exponentiation(3,3))
+
+    def test_MathOperations_SquareRoot(self):
+        self.assertEqual(5, SquareRoot.squareRoot(25))
+
 if __name__ == '__main__':
     unittest.main()
