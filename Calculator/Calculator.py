@@ -5,6 +5,10 @@ addition, subtraction, multiplication, division, square root, and squared
 
 from MathOperations.addition import Addition
 from MathOperations.subtraction import Subtraction
+from MathOperations.multiplication import Multiplication
+from MathOperations.division import Division
+from MathOperations.exponentiation import Exponentiation
+from MathOperations.squareRoot import SquareRoot
 
 class Calculator:
 
@@ -21,26 +25,24 @@ class Calculator:
         self.Result = Subtraction.subtract(a, b)
         return self.Result
 
-    def multiply(self, a, b):
-        return a * b
+    def Multiplication(self, a, b):
+        self.Result = Multiplication.multiplication(a, b)
+        return self.Result
 
-    def divide(self, a, b):
-        # make sure the second number is not a zero, otherwise return a string with error message
-        if b != 0:
-            return a / b
-        else:
-            return "You are funny, no division by 0!"
+    def Division(self, a, b):
+        self.Result = Division.division(a, b)
+        return self.Result
 
-        return a/b
+    def Exponentiation(self, a, b):
+        self.Result = Exponentiation.exponentiation(a, b)
+        return self.Result
 
-    def square(self, a):
-        return a ** 2
-
-    def squareRoot(self, a):
+    def SquareRoot(self, a):
         # import the function sqrt from the math library
         # I am only importing sqrt because it is the only function I need
         from math import sqrt
-        return sqrt(a)
+        self.Result = SquareRoot.squareRoot(a)
+        return self.Result
 
 
 #test = Calculator()
