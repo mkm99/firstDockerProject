@@ -3,18 +3,23 @@ This program will create a calculator object which will have basic operations su
 addition, subtraction, multiplication, division, square root, and squared
 '''
 
-from MathOperations.addition import add
+from MathOperations.addition import Addition
+from MathOperations.subtraction import Subtraction
 
 class Calculator:
+
+    Result = 0
 
     def __init__(self):
         pass
 
-    def Sum(self, augend, addend):
-        return Addition.sum(augend, addend)
+    def Sum(self, a, b):
+        self.Result = Addition.sum(a, b)
+        return self.Result
 
-    def subtract(self, minuend, subtrahend):
-        return Subtraction.subtract(minuend, subtrahend)
+    def Subtract(self, a, b):
+        self.Result = Subtraction.subtract(a, b)
+        return self.Result
 
     def multiply(self, a, b):
         return a * b
@@ -38,5 +43,5 @@ class Calculator:
         return sqrt(a)
 
 
-test = Calculator()
-print(test.divide(2,0))
+#test = Calculator()
+#print(test.divide(2,0))

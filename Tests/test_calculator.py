@@ -2,22 +2,32 @@ import unittest
 
 from Calculator.Calculator import Calculator
 
+
 class MyTestCase(unittest.TestCase):
 
     def test_instantiate_calculator(self):
         calculator = Calculator()
-
         self.assertIsInstance(calculator, Calculator)
 
-    def test_calculator_add(self):
+    def test_calculator_return_Sum(self):
         calculator = Calculator()
-        result = calculator.add(5, 5)
+        result = calculator.Sum(5, 5)
         self.assertEqual(10, result)
 
-    def test_calculator_minus(self):
+    def test_calculator_return_Subtract(self):
         calculator = Calculator()
-        result = calculator.subtract(10 , 5)
+        result = calculator.Subtract(10, 5)
         self.assertEqual(5, result)
+
+    def test_calculator_access_subtract_result(self):
+        calculator = Calculator()
+        calculator.Subtract(10, 5)
+        self.assertEqual(5, calculator.Result)
+
+    def test_calculator_access_addition_result(self):
+        calculator = Calculator()
+        calculator.Sum(5,5)
+        self.assertEqual(10, calculator.Result)
 
     def test_calculator_times(self):
         calculator = Calculator()
