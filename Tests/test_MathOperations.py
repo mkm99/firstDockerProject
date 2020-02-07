@@ -6,6 +6,7 @@ from MathOperations.multiplication import Multiplication
 from MathOperations.division import Division
 from MathOperations.exponentiation import Exponentiation
 from MathOperations.squareRoot import SquareRoot
+from MathOperations.logarithm import Logarithm
 
 
 class MyTestCase(unittest.TestCase):
@@ -31,6 +32,9 @@ class MyTestCase(unittest.TestCase):
 
     def test_MathOperations_SquareRoot(self):
         self.assertEqual(5, SquareRoot.squareRoot(25))
+
+    def test_MathOperations_Logarithm(self):
+        self.assertEqual(3, Logarithm.logarithm(729, 9))
 
 if __name__ == '__main__':
     unittest.main()

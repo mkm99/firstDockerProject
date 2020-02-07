@@ -38,18 +38,6 @@ class MyTestCase(unittest.TestCase):
         calculator.Multiplication(2, 4)
         self.assertEqual(8, calculator.Result)
 
-    '''    
-    def test_calculator_divisionByZero(self):
-        calculator = Calculator()
-        result = calculator.divide(10, 0)
-        self.assertEqual("E", result)
-
-    def test_calculator_access_divison_by_0(self):
-        calculator = Calculator()
-        calculator.Division(5, 0)
-        self.assertEqual("E", calculator.Result)
-    '''
-
     def test_calculator_division(self):
         calculator = Calculator()
         result = calculator.Division(10, 2)
@@ -79,6 +67,16 @@ class MyTestCase(unittest.TestCase):
         calculator = Calculator()
         calculator.SquareRoot(9)
         self.assertEqual(3, calculator.Result)
+
+    def test_calculator_logarithm(self):
+        calculator = Calculator()
+        result = calculator.Logarithm(729, 3)
+        self.assertEqual(6, result)
+
+    def test_calculator_access_logarithm(self):
+        calculator = Calculator()
+        calculator.Logarithm(729, 3)
+        self.assertEqual(6, calculator.Result)
 
 
 if __name__ == '__main__':

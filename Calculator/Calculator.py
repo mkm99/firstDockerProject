@@ -9,6 +9,7 @@ from MathOperations.multiplication import Multiplication
 from MathOperations.division import Division
 from MathOperations.exponentiation import Exponentiation
 from MathOperations.squareRoot import SquareRoot
+from MathOperations.logarithm import Logarithm
 
 class Calculator:
 
@@ -42,6 +43,10 @@ class Calculator:
         # I am only importing sqrt because it is the only function I need
         from math import sqrt
         self.Result = SquareRoot.squareRoot(a)
+        return self.Result
+
+    def Logarithm(self, a, b):
+        self.Result = Logarithm.logarithm(a, b)
         return self.Result
 
 
