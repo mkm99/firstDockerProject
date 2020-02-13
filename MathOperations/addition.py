@@ -1,6 +1,6 @@
 class Addition:
     @staticmethod
-    def sum(augend, addend=None):
+    def addition(augend, addend=None):
         if isinstance(augend, list):
             return Addition.sumList(augend)
         return augend + addend
@@ -9,5 +9,5 @@ class Addition:
     def sumList(valueList):
         result = 0
         for value in valueList:
-            result = Addition.sum(result, value)
+            result = Addition.addition(result, value)
         return result

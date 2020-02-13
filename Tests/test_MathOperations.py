@@ -12,14 +12,14 @@ from MathOperations.logarithm import Logarithm
 class MyTestCase(unittest.TestCase):
 
     def test_MathOperations_Addition(self):
-        self.assertEqual(5, Addition.sum(1,4))
+        self.assertEqual(5, Addition.addition(1,4))
 
     def test_MathOperations_Subtraction(self):
         self.assertEqual(-3, Subtraction.subtract(1,4))
 
     def test_MathOperations_sum_list(self):
         valueList = [1,2,3]
-        self.assertEqual(6, Addition.sum(valueList))
+        self.assertEqual(6, Addition.addition(valueList))
 
     def test_MathOperations_Multiplication(self):
         self.assertEqual(24, Multiplication.multiplication(3,8))

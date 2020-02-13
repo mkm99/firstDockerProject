@@ -19,7 +19,7 @@ class Calculator:
         pass
 
     def Sum(self, a, b):
-        self.Result = Addition.sum(a, b)
+        self.Result = Addition.addition(a, b)
         return self.Result
 
     def Subtract(self, a, b):
